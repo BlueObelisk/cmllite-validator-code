@@ -1,10 +1,15 @@
-glob:.classpath
-glob:.project
-glob:target
-glob:.settings
-glob:example.log
-glob:CMLLiteValidator.iml
-glob:CMLLiteValidator.ipr
-glob:CMLLiteValidator.iws
-glob:example.log.1
-glob:log
+target/
+example.log
+example.log.1
+log
+
+# Eclipse files:
+.classpath
+.project
+.settings
+
+# IntelliJ Idea files:
+CMLLiteValidator.iml
+CMLLiteValidator.ipr
+CMLLiteValidator.iws
+
