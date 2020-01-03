@@ -5,13 +5,67 @@
     <parent>
         <groupId>uk.ac.cam.ch.wwmm</groupId>
         <artifactId>wwmm-parent</artifactId>
-        <version>3</version>
+        <version>6</version>
     </parent>
 
     <groupId>org.xml-cml.validator</groupId>
     <artifactId>cml-validator</artifactId>
     <version>0.0.3-SNAPSHOT</version>
+
     <name>CML Validator Utilities</name>
+    <description>CML validation via xpath expressions.</description>
+    <url>http://www.xml-cml.org/</url>
+    <inceptionYear>2010</inceptionYear>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <scm>
+      <url>https://github.com/BlueObelisk/cmllite-validator-code</url>
+      <connection>scm:git:https://github.com/BlueObelisk/cmllite-validator-code</connection>
+      <developerConnection>scm:git:ssh://github.com/BlueObelisk/cmllite-validator-code.git</developerConnection>
+    </scm>
+
+    <developers>
+      <developer>
+        <name>Peter Murray-Rust</name>
+        <id>pm286</id>
+      </developer>
+      <developer>
+        <name>Joe A Townsend</name>
+        <id>jat45</id>
+      </developer>
+      <developer>
+        <name>Weerapong Phadungsukanan</name>
+        <id>gigadot</id>
+      </developer>
+      <developer>
+        <name>Sam Adams</name>
+        <id>sea36</id>
+      </developer>
+      <developer>
+        <name>Jens Thomas</name>
+        <id>linucks42</id>
+      </developer>
+      <developer>
+        <name>Oliver Stueker</name>
+        <id>ostueker</id>
+      </developer>
+    </developers>
+
+    <mailingLists>
+      <mailingList>
+        <name>cml-discuss</name>
+        <subscribe>https://lists.sourceforge.net/lists/listinfo/cml-discuss
+        </subscribe>
+        <unsubscribe>https://lists.sourceforge.net/lists/listinfo/cml-discuss
+        </unsubscribe>
+        <archive>http://sourceforge.net/mailarchive/forum.php?forum_name=cml-discuss
+        </archive>
+      </mailingList>
+    </mailingLists>
 
     <build>
         <plugins>
@@ -24,21 +78,37 @@
                     </descriptorRefs>
                 </configuration>
             </plugin>
+          <!-- Licence Maven Plugin (add license info to source files) -->
+<!--
+          <plugin>
+            <groupId>com.mycila</groupId>
+            <artifactId>license-maven-plugin</artifactId>
+            <version>2.11</version>
+            <configuration>
+              <header>com/mycila/maven/plugin/license/templates/APACHE-2.txt</header>
+              <properties>
+                <owner>Peter Murray-Rust</owner>
+              </properties>
+              <excludes>
+                <exclude>**/README.md</exclude>
+                <exclude>LICENSE.txt</exclude>
+                <exclude>.gitignore</exclude>
+                <exclude>src/test/resources/**</exclude>
+                <exclude>src/main/resources/**</exclude>
+                <exclude>junk/**</exclude>
+              </excludes>
+            </configuration>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>check</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+-->
         </plugins>
     </build>
-
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    </properties>
-
-    <repositories>
-        <repository>
-            <id>ucc-repo</id>
-            <url>http://maven.ch.cam.ac.uk/m2repo</url>
-        </repository>
-    </repositories>
 
     <dependencies>
         <dependency>
@@ -66,7 +136,6 @@
             <artifactId>xom</artifactId>
             <version>1.2.5</version>
         </dependency>
-
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
