@@ -1,4 +1,5 @@
 # CML Validator Utilities
+[![Build Status](https://travis-ci.org/BlueObelisk/cmllite-validator-code.svg?branch=master)](https://travis-ci.org/BlueObelisk/cmllite-validator-code)
 
 This tool performs CML validation via xpath expressions, not XML schema.
 
